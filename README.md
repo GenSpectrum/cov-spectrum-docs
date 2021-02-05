@@ -1,2 +1,2 @@
-# variant-monitor-docs
+# Variant Monitor
 
