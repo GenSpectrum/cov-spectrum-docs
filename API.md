@@ -231,16 +231,82 @@ Request params:
 
 ## Computed
 
-TODO
+### Growing Variants
+
+Returns a list of variants what that experienced a high relative growth compared to the previous week.
+
+**Request:**
+
+```
+GET /computed/find-growing-variants
+Request params:
+  - year: integer (required)
+  - week: integer (required)
+  - country: string (required)
+```
+
+**Response:**
+
+```
+[
+  {
+    variant: {
+      name: null,
+      mutations: [string]
+    },
+    t0Count: integer,
+    t1Count: integer,
+    t0Proportions: float,
+    t1Proportions: float,
+    absoluteDifferenceProportion: float,
+    relativeDifferenceProportion: float
+  }
+]
+```
 
 
 
 ## Utils
 
-TODO
+### Current Week
+
+Returns today's isoweek.
+
+**Request:**
+
+```
+GET /utils/currentweek
+```
+
+**Response:**
+
+```
+integer
+```
 
 
 
 ## Internal
 
-TODO
+### Login
+
+Returns a JWT token if the submitted credentials are valid.
+
+**Request:**
+
+```
+POST /internal/login
+Request body:
+  {
+    username: string,
+    password: string
+  }
+```
+
+**Response:**
+
+```
+{
+  token: string
+}
+```
