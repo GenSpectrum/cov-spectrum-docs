@@ -201,7 +201,7 @@ Returns the number of samples of a variant per zip code area and week. Zip code 
 **Request:**
 
 ```
-GET /plot/variant/international-time-distribution
+GET /plot/variant/time-zip-code-distribution
 Request params:
   - country: string (required)
   - mutations: string, comma-separated (required)
