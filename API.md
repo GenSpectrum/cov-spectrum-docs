@@ -49,11 +49,22 @@ Request params:
       name: string,
       country: string,
       date: Date,
-      mutations: [string]
+      mutations: [string],
+      metadata: {
+        country: string,
+        division, string,
+        location: string,
+        zipCode: string,
+        host: string,
+        age: integer,
+        sex: string
+      }
     }
   ]
 }
 ```
+
+`data.metadata` is always **private**.
 
 
 ### Variant
