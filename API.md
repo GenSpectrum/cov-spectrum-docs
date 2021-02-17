@@ -267,8 +267,8 @@ Request params:
     },
     t0Count: integer,
     t1Count: integer,
-    t0Proportions: float,
-    t1Proportions: float,
+    t0Proportion: float,
+    t1Proportion: float,
     absoluteDifferenceProportion: float,
     relativeDifferenceProportion: float
   }
