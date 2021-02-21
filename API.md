@@ -5,6 +5,13 @@
 The server distinguishes between a **private** (the user is logged-in) and **public** (the user is not logged-in) access. Many information (including most of our metadata for Switzerland) is only available with a private access. The API endpoints are the same but an empty list will be returned if no public information is available.
 
 
+### Authentication
+
+JSON Web Tokens (JWT) are used for authentication. Upon login (see below), a token will be provided. The token has to be sent with every subsequent request. There are two ways to send the token:
+
+* In the request header: `Authorization: Bearer <token>` (the preferred way)
+* In the query params: `?jwt=<token>`
+
 
 ## Resources
 
@@ -65,6 +72,29 @@ Request params:
 ```
 
 `data.metadata` is always **private**.
+
+
+### Sample: Sequences in Fasta Format
+
+Returns the sequences corresponding to the results of `GET /resource/sample` in the fasta format. The maximal number of returned results is also limited at 1000.
+
+**Request:**
+
+```
+GET /resource/sample-fasta
+Request params:
+  - country: string
+  - mutations: string, comma-separated (required)
+  - matchPercentage: float (default: 1)
+```
+
+**Response:**
+
+```
+string
+```
+
+The endpoint is **private**.
 
 
 ### Variant
@@ -321,3 +351,24 @@ Request body:
   token: string
 }
 ```
+
+
+### Temporary JWT Token
+
+Returns a JWT token with a TTL of 3 minutes.
+
+**Request:**
+
+```
+POST /internal/create-temporary-jwt
+```
+
+**Response**
+
+```
+{
+  token: string
+}
+```
+
+The endpoint is **private**.
