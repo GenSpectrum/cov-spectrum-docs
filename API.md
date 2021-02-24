@@ -362,7 +362,7 @@ Returns a JWT token with a TTL of 3 minutes that can be used to authenticate acc
 ```
 POST /internal/create-temporary-jwt
 Request params:
-  - restrictionEndpoint: string
+  - restrictionEndpoint: string (required)
 ```
 
 **Response**
