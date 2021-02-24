@@ -355,12 +355,14 @@ Request body:
 
 ### Temporary JWT Token
 
-Returns a JWT token with a TTL of 3 minutes.
+Returns a JWT token with a TTL of 3 minutes that can be used to authenticate access to a particular endpoint.
 
 **Request:**
 
 ```
 POST /internal/create-temporary-jwt
+Request params:
+  - restrictionEndpoint: string
 ```
 
 **Response**
