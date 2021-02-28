@@ -306,6 +306,74 @@ Request params:
 ```
 
 
+#### chen2021Fitness
+
+Based on Chen et al. (2021): "Quantification of the spread of SARS-CoV-2 variant B.1.1.7 in Switzerland"
+
+**Request:**
+
+```
+GET /computed/model/chen2021Fitness
+Request params:
+  - country: string (required)
+  - mutations: string, comma-separated (required)
+  - matchPercentage: float (default: 1)
+  - alpha: float (default: 0.95)
+  - generationTime: float (default: 4.8)
+  - reproductionNumberWildtype: float (default: 1)
+  - plotStartDate: date
+  - plotEndDate: date (required)
+  - initialWildtypeCases: integer (default: 1000)
+  - initialVariantCases: integer (default: 100)
+```
+
+**Response:**
+
+```
+{
+  daily: {
+    t: [date],
+    proportion: [float],
+    ciLower: [float],
+    ciUpper: [float]
+  },
+  params: {
+    a: {
+      value: float,
+      ciLower: float,
+      ciUpper: float
+    },
+    t0: {
+      value: float,
+      ciLower: float,
+      ciUpper: float
+    },
+    fc: {
+      value: float,
+      ciLower: float,
+      ciUpper: float
+    },
+    fd: {
+      value: float,
+      ciLower: float,
+      ciUpper: float
+    }
+  },
+  plotAbsoluteNumbers: {
+    t: [date],
+    variantCases: [integer],
+    wildtypeCases: [integer]
+  },
+  plotProportion: {
+    t: [date],
+    proportion: [float],
+    ciLower: [float],
+    ciUpper: [float]
+  }
+}
+```
+
+
 
 ## Utils
 
