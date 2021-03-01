@@ -259,7 +259,7 @@ Request params:
         yearWeek: string (<iso year>-<iso week>),
         firstDayInWeek: Date
       },
-      zip_code: string
+      zipCode: string
     },
     y: {
       count: integer
