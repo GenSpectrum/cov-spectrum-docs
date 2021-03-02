@@ -306,7 +306,7 @@ Request params:
 ```
 
 
-#### chen2021Fitness
+#### Model: chen2021Fitness
 
 Based on Chen et al. (2021): "Quantification of the spread of SARS-CoV-2 variant B.1.1.7 in Switzerland"
 
