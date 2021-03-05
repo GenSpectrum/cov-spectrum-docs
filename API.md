@@ -71,7 +71,7 @@ Request params:
 }
 ```
 
-`data.metadata` is always **private**.
+`data.metadata` is always **private** (i.e., `null` for **public** access). `data.mutations` is only **public** for samples submitted by selected labs. 
 
 
 ### Sample: Sequences in Fasta Format
