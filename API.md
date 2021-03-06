@@ -271,7 +271,9 @@ Request params:
 
 ## Sequencing Intensity Through Time
 
-Returns the number of confirmed cases and the number of available sequences of a country.
+Returns the number of confirmed cases and the number of available sequences of a country. The number of cases is from the OWID dataset.
+
+Usually, `numberCases` should be larger than `numberSequenced` - but no guarantees!
 
 **Request:**
 
