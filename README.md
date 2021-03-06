@@ -1,2 +1,2 @@
-# Variant Monitor
+# CoV-Spectrum - Documentation
 
