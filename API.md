@@ -269,6 +269,36 @@ Request params:
 ```
 
 
+## Sequencing Intensity Through Time
+
+Returns the number of confirmed cases and the number of available sequences of a country.
+
+**Request:**
+
+```
+GET /plot/sequencing/time-intensity-distribution
+Request params:
+  - country: string (required)
+```
+
+**Response:**
+
+```
+[
+  {
+    x: {
+      yearWeek: string (<iso year>-<iso week>),
+      firstDayInWeek: Date
+    },
+    y: {
+      numberCases: integer,
+      numberSequenced: integer
+    }
+  }
+]
+```
+
+
 
 ## Computed
 
