@@ -44,6 +44,7 @@ Request params:
   - country: string
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
 ```
 
 **Response:**
@@ -86,6 +87,7 @@ Request params:
   - country: string
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
 ```
 
 **Response:**
@@ -95,28 +97,6 @@ string
 ```
 
 The endpoint is **private**.
-
-
-### Variant
-
-Returns a list of all known variants.
-
-**Request:**
-
-```
-GET /resource/variant
-```
-
-**Response:**
-
-```
-[
-  {
-    name: string,
-    mutations: [string]
-  }
-]
-```
 
 
 
@@ -134,6 +114,7 @@ Request params:
   - country: string (required)
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
 ```
 
 **Response:**
@@ -169,6 +150,7 @@ Request params:
   - country: string (required)
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
 ```
 
 **Response:**
@@ -247,6 +229,7 @@ Request params:
   - country: string (required)
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
 ```
 
 **Response:**
@@ -281,6 +264,7 @@ Usually, `numberCases` should be larger than `numberSequenced` - but no guarante
 GET /plot/sequencing/time-intensity-distribution
 Request params:
   - country: string (required)
+  - dataType: string (possible values: "SURVEILLANCE")
 ```
 
 **Response:**
@@ -350,6 +334,7 @@ Request params:
   - country: string (required)
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
   - alpha: float (default: 0.95)
   - generationTime: float (default: 4.8)
   - reproductionNumberWildtype: float (default: 1)
