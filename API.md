@@ -32,6 +32,61 @@ GET /resource/country
 ```
 
 
+### Region
+
+Returns a list of all region (continent) names.
+
+**Request:**
+
+```
+GET /resource/region
+```
+
+**Response:**
+
+```
+[string]
+```
+
+
+### Sample (new)
+
+Returns a list of samples. This endpoint will soon supersede all the `/plot/variant/*` endpoints.
+
+**Request:**
+
+```
+GET /resource/sample2
+Request params:
+  - region: string
+  - country: string
+  - mutations: string, comma-separated (required)
+  - matchPercentage: float (default: 1)
+  - dataType: string (possible values: "SURVEILLANCE")
+```
+
+**Response:**
+
+```
+[
+  {
+    date: Date,
+    region: string,
+    country: string,
+    division?: string,
+    zipCode?: string,
+    ageGroup?: string,
+    hospitalized?: boolean,
+    deceased?: boolean,
+    count: integer
+  }
+]
+```
+
+If a value is not provided, it is either unknown or **private**. `count` gives the number of instances with the same attributes.
+
+
+
 ### Sample
 
 Returns a list of samples that matches the query. The maximal number of returned results is limited at 1000.
