@@ -396,7 +396,7 @@ Request params:
   - alpha: float (default: 0.95)
   - generationTime: float (default: 4.8)
   - reproductionNumberWildtype: float (default: 1)
-  - plotStartDate: date
+  - plotStartDate: date (required)
   - plotEndDate: date (required)
   - initialWildtypeCases: integer (default: 1000)
   - initialVariantCases: integer (default: 100)
