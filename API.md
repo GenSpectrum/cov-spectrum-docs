@@ -329,10 +329,7 @@ Request params:
 ```
 [
   {
-    x: {
-      yearWeek: string (<iso year>-<iso week>),
-      firstDayInWeek: Date
-    },
+    x: date,
     y: {
       numberCases: integer,
       numberSequenced: integer
