@@ -63,6 +63,8 @@ Request params:
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
   - dataType: string (possible values: "SURVEILLANCE")
+  - dateFrom: Date
+  - dateTo: Date
 ```
 
 **Response:**
