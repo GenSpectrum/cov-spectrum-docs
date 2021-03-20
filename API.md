@@ -388,7 +388,8 @@ Based on Chen et al. (2021): "Quantification of the spread of SARS-CoV-2 variant
 ```
 GET /computed/model/chen2021Fitness
 Request params:
-  - country: string (required)
+  - region: string
+  - country: string
   - mutations: string, comma-separated (required)
   - matchPercentage: float (default: 1)
   - dataType: string (possible values: "SURVEILLANCE")
