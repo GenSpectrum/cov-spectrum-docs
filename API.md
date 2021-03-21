@@ -78,6 +78,7 @@ Request params:
     division?: string,
     zipCode?: string,
     ageGroup?: string,
+    sex?: "Male"|"Female",
     hospitalized?: boolean,
     deceased?: boolean,
     count: integer
