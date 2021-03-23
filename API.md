@@ -321,7 +321,8 @@ Usually, `numberCases` should be larger than `numberSequenced` - but no guarante
 ```
 GET /plot/sequencing/time-intensity-distribution
 Request params:
-  - country: string (required)
+  - region: string
+  - country: string
   - dataType: string (possible values: "SURVEILLANCE")
 ```
 
