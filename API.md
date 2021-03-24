@@ -60,7 +60,7 @@ GET /resource/sample2
 Request params:
   - region: string
   - country: string
-  - mutations: string, comma-separated (required)
+  - mutations: string, comma-separated
   - matchPercentage: float (default: 1)
   - dataType: string (possible values: "SURVEILLANCE")
   - dateFrom: Date
