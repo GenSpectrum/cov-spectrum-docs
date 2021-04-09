@@ -65,6 +65,7 @@ Request params:
   - dataType: string (possible values: "SURVEILLANCE")
   - dateFrom: Date
   - dateTo: Date
+  - fields: string, comma-separated
 ```
 
 **Response:**
@@ -86,7 +87,7 @@ Request params:
 ]
 ```
 
-If a value is not provided, it is either unknown or **private**. `count` gives the number of instances with the same attributes.
+If a value is not provided, it is either unknown or **private**. `count` gives the number of instances with the same attributes. If the requeset parameter `fields` is set, only the defined fields and `count` will be returned.
 
 
 
