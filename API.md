@@ -62,10 +62,11 @@ Request params:
   - country: string
   - mutations: string, comma-separated
   - matchPercentage: float (default: 1)
+  - pangolinLineage: string
   - dataType: string (possible values: "SURVEILLANCE")
   - dateFrom: Date
   - dateTo: Date
-  - fields: string, comma-separated
+  - fields: string, comma-separated (default: "date,region,country,division,zipCode,ageGroup,sex,hospitalized,deceased")
 ```
 
 **Response:**
@@ -73,15 +74,16 @@ Request params:
 ```
 [
   {
-    date: Date,
-    region: string,
-    country: string,
+    date?: Date,
+    region?: string,
+    country?: string,
     division?: string,
     zipCode?: string,
     ageGroup?: string,
     sex?: "Male"|"Female",
     hospitalized?: boolean,
     deceased?: boolean,
+    pangolinLineage?: string,
     count: integer
   }
 ]
