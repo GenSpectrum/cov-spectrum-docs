@@ -160,6 +160,36 @@ string
 The endpoint is **private**.
 
 
+### Article
+
+Returns publications and pre-prints on medRxiv and bioRxiv that mention a pangolin lineage in the title or abstract.
+
+**Request:**
+
+```
+GET /resource/article
+Request params:
+  - pangolinLineage: string (required)
+```
+
+**Response:**
+
+```
+[
+  {
+    doi: string,
+    title: string,
+    authors: string,
+    date: date,
+    category?: string,
+    published?: string,
+    server: string,
+    abstract?: string
+  }
+]
+```
+
+
 
 ## Sequencing Intensity Through Time
 
