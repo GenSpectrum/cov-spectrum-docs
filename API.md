@@ -12,6 +12,27 @@ JSON Web Tokens (JWT) are used for authentication. Upon login (see below), a tok
 * In the request header: `Authorization: Bearer <token>` (the preferred way)
 * In the query params: `?jwt=<token>`
 
+## General
+
+### Data status
+
+Returns general information about the data.
+
+**Request:**
+
+```
+GET /data-status
+```
+
+**Response:**
+
+```
+{
+  lastUpdateTimestamp: timestamp (in UTC time, e.g., 2021-05-18T19:42:01.091678)
+}
+```
+
+
 
 ## Resources
 
