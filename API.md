@@ -72,7 +72,7 @@ GET /resource/region
 
 ### Sample (new)
 
-Returns a list of samples. This endpoint will soon supersede `/resource/sample` and all the `/plot/variant/*` endpoints. Then, it will be renamed to `/resource/sample`.
+Returns a list of samples.
 
 **Request:**
 
