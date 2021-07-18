@@ -181,6 +181,33 @@ string
 The endpoint is **private**.
 
 
+### Reference Genome
+
+Returns information about the reference genome.
+
+**Request**
+
+```
+GET /resource/reference-genome
+```
+
+**Response:**
+
+```
+{
+  nucSeq: string,
+  genes: [
+    {
+      name: string,
+      startPosition: integer (numbering starts at 1),
+      endPosition: integer (numbering starts at 1),
+      aaSeq: string
+    }
+  ]
+}
+```
+
+
 ### Article
 
 Returns publications and pre-prints on medRxiv and bioRxiv that mention a pangolin lineage in the title or abstract.
